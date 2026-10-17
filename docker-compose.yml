@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    image: kantpay-arsen-devops
+    container_name: kantpay-arsen-container
+    ports:
+      - "8088:8088"
+    environment:
+      - STUDENT_NAME=Arsen
+      - STUDENT_SURNAME=Kantpay
+      - STUDENT_GROUP=IT2-207
+      - STUDENT_ID=37705
+    restart: unless-stopped
